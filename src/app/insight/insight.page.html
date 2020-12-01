@@ -1,0 +1,470 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>
+			<div class="d-flex">
+				<div class="logo">
+					<img src="assets/images/logo.png">
+				</div>
+                <h2 class="back_btn end" (click)="home()"><ion-icon name="arrow-back"></ion-icon>{{'back_to_order' | translate}}</h2>
+			</div>
+		</ion-title>
+	</ion-toolbar>
+
+	<ion-segment [(ngModel)]="tab" lines="none">
+		<ion-segment-button value="today">
+			<ion-label>
+				{{'today' | translate}}
+			</ion-label>
+		</ion-segment-button>
+		<ion-segment-button value="week">
+			<ion-label>
+				{{'week' | translate}}
+			</ion-label>
+		</ion-segment-button>
+		<ion-segment-button value="month">
+			<ion-label>
+				{{'month' | translate}}
+			</ion-label>
+		</ion-segment-button>
+	</ion-segment>
+</ion-header>
+
+<ion-content class="bg_color">
+	<div class="tab_container" [ngSwitch]="tab">
+
+
+		<div class="container" *ngSwitchCase="'today'">
+			<ion-grid class="ion-no-padding">
+				<ion-row>
+					<ion-col size="12" size-lg="3" size-md="3" size-sm="6">
+						<div class="order_details d-flex">
+							<div class="icon_box">
+								<img src="assets/images/ic_Serving.png">
+							</div>
+							<div class="text_box">
+								<h2>{{'total_order' | translate}}</h2>
+								<h3>128</h3>
+							</div>
+						</div>
+					</ion-col>
+					<ion-col size="12" size-lg="3" size-md="3" size-sm="6">
+						<div class="order_details d-flex">
+							<div class="icon_box">
+								<img src="assets/images/ic_cutlery.png">
+							</div>
+							<div class="text_box">
+								<h2>{{'total_items' | translate}}</h2>
+								<h3>698</h3>
+							</div>
+						</div>
+					</ion-col>
+					<ion-col size="12" size-lg="3" size-md="3" size-sm="6">
+						<div class="order_details d-flex">
+							<div class="icon_box">
+								<img src="assets/images/ic_energy.png">
+							</div>
+							<div class="text_box">
+								<h2>{{'time_cooked' | translate}}</h2>
+								<h3>7:15</h3>
+							</div>
+						</div>
+					</ion-col>
+					<ion-col size="12" size-lg="3" size-md="3" size-sm="6">
+						<div class="order_details d-flex">
+							<div class="icon_box">
+								<img src="assets/images/ic_Serving.png">
+							</div>
+							<div class="text_box">
+								<h2>{{'total_order' | translate}}</h2>
+								<h3>1589</h3>
+							</div>
+						</div>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</div>
+
+
+		<div class="container" *ngSwitchCase="'week'">
+			<ion-grid class="ion-no-padding">
+				<ion-row>
+					<ion-col size="12" size-lg="3" size-md="3" size-sm="6">
+						<div class="order_details d-flex">
+							<div class="icon_box">
+								<img src="assets/images/ic_Serving.png">
+							</div>
+							<div class="text_box">
+								<h2>{{'total_order' | translate}}</h2>
+								<h3>945</h3>
+							</div>
+						</div>
+					</ion-col>
+					<ion-col size="12" size-lg="3" size-md="3" size-sm="6">
+						<div class="order_details d-flex">
+							<div class="icon_box">
+								<img src="assets/images/ic_cutlery.png">
+							</div>
+							<div class="text_box">
+								<h2>{{'total_items' | translate}}</h2>
+								<h3>1074</h3>
+							</div>
+						</div>
+					</ion-col>
+					<ion-col size="12" size-lg="3" size-md="3" size-sm="6">
+						<div class="order_details d-flex">
+							<div class="icon_box">
+								<img src="assets/images/ic_energy.png">
+							</div>
+							<div class="text_box">
+								<h2>{{'time_cooked' | translate}}</h2>
+								<h3>10:15</h3>
+							</div>
+						</div>
+					</ion-col>
+					<ion-col size="12" size-lg="3" size-md="3" size-sm="6">
+						<div class="order_details d-flex">
+							<div class="icon_box">
+								<img src="assets/images/ic_Serving.png">
+							</div>
+							<div class="text_box">
+								<h2>{{'total_order' | translate}}</h2>
+								<h3>3589</h3>
+							</div>
+						</div>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</div>
+
+
+		<div class="container" *ngSwitchCase="'month'">
+			<ion-grid class="ion-no-padding">
+				<ion-row>
+					<ion-col size="12" size-lg="3" size-md="3" size-sm="6">
+						<div class="order_details d-flex">
+							<div class="icon_box">
+								<img src="assets/images/ic_Serving.png">
+							</div>
+							<div class="text_box">
+								<h2>{{'total_order' | translate}}</h2>
+								<h3>22208</h3>
+							</div>
+						</div>
+					</ion-col>
+					<ion-col size="12" size-lg="3" size-md="3" size-sm="6">
+						<div class="order_details d-flex">
+							<div class="icon_box">
+								<img src="assets/images/ic_cutlery.png">
+							</div>
+							<div class="text_box">
+								<h2>{{'total_items' | translate}}</h2>
+								<h3>9634</h3>
+							</div>
+						</div>
+					</ion-col>
+					<ion-col size="12" size-lg="3" size-md="3" size-sm="6">
+						<div class="order_details d-flex">
+							<div class="icon_box">
+								<img src="assets/images/ic_energy.png">
+							</div>
+							<div class="text_box">
+								<h2>{{'time_cooked' | translate}}</h2>
+								<h3>12:15</h3>
+							</div>
+						</div>
+					</ion-col>
+					<ion-col size="12" size-lg="3" size-md="3" size-sm="6">
+						<div class="order_details d-flex">
+							<div class="icon_box">
+								<img src="assets/images/ic_Serving.png">
+							</div>
+							<div class="text_box">
+								<h2>{{'total_order' | translate}}</h2>
+								<h3>10589</h3>
+							</div>
+						</div>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</div>
+	</div>
+
+
+
+
+	<div class="highest_selling">
+		<h1 class="">{{'highest_selling_item' | translate}}</h1>
+		<div class="scroll_container">
+			<div class="item active">
+				<div class="item_img center_img">
+					<img src="assets/images/1.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2>Cream Pancake</h2>
+					<h3>$12.00</h3>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item_img center_img">
+					<img src="assets/images/2.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2>White Source Pasta</h2>
+					<h3>$12.00</h3>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item_img center_img">
+					<img src="assets/images/3.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2>Farm Vill Pizza</h2>
+					<h3>$12.00</h3>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item_img center_img">
+					<img src="assets/images/1.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2>Cream Pancake</h2>
+					<h3>$12.00</h3>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item_img center_img">
+					<img src="assets/images/2.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2>White Source Pasta</h2>
+					<h3>$12.00</h3>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item_img center_img">
+					<img src="assets/images/3.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2>Farm Vill Pizza</h2>
+					<h3>$12.00</h3>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item_img center_img">
+					<img src="assets/images/1.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2>Cream Pancake</h2>
+					<h3>$12.00</h3>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item_img center_img">
+					<img src="assets/images/2.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2>White Source Pasta</h2>
+					<h3>$12.00</h3>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item_img center_img">
+					<img src="assets/images/3.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2>Farm Vill Pizza</h2>
+					<h3>$12.00</h3>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item_img center_img">
+					<img src="assets/images/1.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2>Cream Pancake</h2>
+					<h3>$12.00</h3>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item_img center_img">
+					<img src="assets/images/2.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2>White Source Pasta</h2>
+					<h3>$12.00</h3>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item_img center_img">
+					<img src="assets/images/3.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h2>Farm Vill Pizza</h2>
+					<h3>$12.00</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="graph_container d-flex">
+
+		<div class="background_img center_img">
+			<img src="assets/images/1.png" class="crop_img">
+		</div>
+		<div class="text_container">
+			<p class="ion-text-end"><span>125</span></p>
+			<p class="ion-text-end"><span>100</span></p>
+			<p class="ion-text-end"><span>75</span></p>
+			<p class="ion-text-end"><span>50</span></p>
+			<p class="ion-text-end"><span>25</span></p>
+			<p class="ion-text-end"><span>0</span></p>
+		</div>
+		<div class="graph end">
+			<div class="bar_box">
+				<h4>12 Jan</h4>
+
+				<div class="bar" style="height:30%;">
+					<div class="icon_box">
+						<ion-icon class="zmdi zmdi-circle"></ion-icon>
+					</div>
+					<h5>124 {{'items' | translate}}</h5>
+				</div>
+			</div>
+			<div class="bar_box">
+				<h4>12 Jan</h4>
+
+				<div class="bar" style="height:45%;">
+					<div class="icon_box">
+						<ion-icon class="zmdi zmdi-circle"></ion-icon>
+					</div>
+					<h5>124 {{'items' | translate}}</h5>
+				</div>
+			</div>
+			<div class="bar_box">
+				<h4>12 Jan</h4>
+
+				<div class="bar" style="height:35%;">
+					<div class="icon_box">
+						<ion-icon class="zmdi zmdi-circle"></ion-icon>
+					</div>
+					<h5>124 {{'items' | translate}}</h5>
+				</div>
+			</div>
+			<div class="bar_box">
+				<h4>12 Jan</h4>
+
+				<div class="bar" style="height:60%;">
+					<div class="icon_box">
+						<ion-icon class="zmdi zmdi-circle"></ion-icon>
+					</div>
+					<h5>124 {{'items' | translate}}</h5>
+				</div>
+			</div>
+			<div class="bar_box">
+				<h4>12 Jan</h4>
+
+				<div class="bar" style="height:55%;">
+					<div class="icon_box">
+						<ion-icon class="zmdi zmdi-circle"></ion-icon>
+					</div>
+					<h5>124 {{'items' | translate}}</h5>
+				</div>
+			</div>
+			<div class="bar_box">
+				<h4>12 Jan</h4>
+
+				<div class="bar" style="height:40%;">
+					<div class="icon_box">
+						<ion-icon class="zmdi zmdi-circle"></ion-icon>
+					</div>
+					<h5>124 {{'items' | translate}}</h5>
+				</div>
+			</div>
+			<div class="bar_box active">
+				<h4>12 Jan</h4>
+				<div class="bar" style="height:75%;">
+					<div class="icon_box">
+						<ion-icon class="zmdi zmdi-circle"></ion-icon>
+					</div>
+					<h5>124 {{'items' | translate}}</h5>
+				</div>
+			</div>
+			<div class="bar_box">
+				<h4>12 Jan</h4>
+
+				<div class="bar" style="height:30%;">
+					<div class="icon_box">
+						<ion-icon class="zmdi zmdi-circle"></ion-icon>
+					</div>
+					<h5>124 {{'items' | translate}}</h5>
+				</div>
+			</div>
+			<div class="bar_box">
+				<h4>12 Jan</h4>
+
+				<div class="bar" style="height:45%;">
+					<div class="icon_box">
+						<ion-icon class="zmdi zmdi-circle"></ion-icon>
+					</div>
+					<h5>124 {{'items' | translate}}</h5>
+				</div>
+			</div>
+			<div class="bar_box">
+				<h4>12 Jan</h4>
+
+				<div class="bar" style="height:35%;">
+					<div class="icon_box">
+						<ion-icon class="zmdi zmdi-circle"></ion-icon>
+					</div>
+					<h5>124 {{'items' | translate}}</h5>
+				</div>
+			</div>
+			<div class="bar_box">
+				<h4>12 Jan</h4>
+
+				<div class="bar" style="height:60%;">
+					<div class="icon_box">
+						<ion-icon class="zmdi zmdi-circle"></ion-icon>
+					</div>
+					<h5>124 {{'items' | translate}}</h5>
+				</div>
+			</div>
+			<div class="bar_box">
+				<h4>12 Jan</h4>
+
+				<div class="bar" style="height:55%;">
+					<div class="icon_box">
+						<ion-icon class="zmdi zmdi-circle"></ion-icon>
+					</div>
+					<h5>124 {{'items' | translate}}</h5>
+				</div>
+			</div>
+			<div class="bar_box">
+				<h4>12 Jan</h4>
+
+				<div class="bar" style="height:40%;">
+					<div class="icon_box">
+						<ion-icon class="zmdi zmdi-circle"></ion-icon>
+					</div>
+					<h5>124 {{'items' | translate}}</h5>
+				</div>
+			</div>
+			<div class="bar_box">
+				<h4>12 Jan</h4>
+				<div class="bar" style="height:65%;">
+					<div class="icon_box">
+						<ion-icon class="zmdi zmdi-circle"></ion-icon>
+					</div>
+					<h5>124 {{'items' | translate}}</h5>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+
+
+	 
+</ion-content>

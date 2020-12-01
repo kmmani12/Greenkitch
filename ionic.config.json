@@ -1,0 +1,7 @@
+{
+  "name": "suzlon_kitchen",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

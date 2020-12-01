@@ -1,0 +1,327 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <div class="d-flex">
+                <div class="logo">
+                    <img src="assets/images/logo.png">
+                </div>
+
+                <div class="buy_this_app" *ngIf="config.showBuyPromt" (click)="buyAppAction()">
+                    <h2>
+                        <ion-icon class="zmdi zmdi-mall"></ion-icon>
+                        {{"buy_this_app" | translate}}
+                    </h2>
+                </div>
+                
+                <div class="end" style="display: flex;  align-items: center;">
+                    <div class="select_language_icon" (click)="select_language()">
+                        <ion-icon class="zmdi zmdi-translate"></ion-icon>
+                    </div>
+                    <h4 class="ion-text-center" (click)="insight()">
+                        <ion-icon class="zmdi zmdi-chart ion-text-start"></ion-icon>
+                        {{'food_insight' | translate}}
+                    </h4>
+                </div>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="bg_color">
+    <div class="order_container">
+        <div class="order active1">
+            <div class="order_inner">
+                <div class="order_header">
+                    <h2 class="d-flex">
+                        {{'table' | translate}} 6
+                        <span class="end">8:49</span>
+                    </h2>
+                </div>
+                <div [ngClass]="order1 ? 'item order_done' : 'item'" (click)="toggleOrder1()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>Chat Masala</h4>
+                </div>
+                <div [ngClass]="order2 ? 'item order_done' : 'item'" (click)="toggleOrder2()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>
+                        Veg Cheese Pizza
+                        <span>Extra Cheese</span>
+                    </h4>
+                </div>
+                <div [ngClass]="order3 ? 'item order_done' : 'item'" (click)="toggleOrder3()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>Fride Checken</h4>
+                </div>
+                <div [ngClass]="order4 ? 'item order_done' : 'item'" (click)="toggleOrder4()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>Mashroom Pizza</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="order active2">
+            <div class="order_inner">
+                <div class="order_header">
+                    <h2 class="d-flex">
+                        {{'table' | translate}} 2
+                        <span class="end">5:12</span>
+                    </h2>
+                </div>
+                <div [ngClass]="order5 ? 'item order_done' : 'item'" (click)="toggleOrder5()">
+                    <h3 class="ion-text-start">2</h3>
+                    <h4>Vanila Ice Cream</h4>
+                </div>
+                <div [ngClass]="order6 ? 'item order_done' : 'item'" (click)="toggleOrder6()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>
+                        Egg Faritta
+                        <span>Extra Cheese</span>
+                        <span>Extra Egg</span>
+                    </h4>
+                </div>
+                <div [ngClass]="order7 ? 'item order_done' : 'item'" (click)="toggleOrder7()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>Rosted Chicken
+                        <span>Extra Cheese</span>
+                    </h4>
+                </div>
+                <div [ngClass]="order8 ? 'item order_done' : 'item'" (click)="toggleOrder8()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>Farm Ville Pizz
+                        <span>Extra Cheese</span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="order">
+            <div class="order_inner">
+                <div class="order_header">
+                    <h2 class="d-flex">
+                        {{'table' | translate}} 7
+                        <span class="end">1:33</span>
+                    </h2>
+                </div>
+                <div [ngClass]="order9 ? 'item order_done' : 'item'" (click)="toggleOrder9()">
+                    <h3 class="ion-text-start order_done">1</h3>
+                    <h4>Chat Masala</h4>
+                </div>
+                <div [ngClass]="order10 ? 'item order_done' : 'item'" (click)="toggleOrder10()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>
+                        Veg Cheese Pizza
+                        <span>Extra Cheese</span>
+                    </h4>
+                </div>
+                <div [ngClass]="order11 ? 'item order_done' : 'item'" (click)="toggleOrder11()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>Fride Checken</h4>
+                </div>
+
+                <div [ngClass]="order12 ? 'item order_done' : 'item'" (click)="toggleOrder12()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>Mashroom Pizza</h4>
+                </div>
+                <div [ngClass]="order13 ? 'item order_done' : 'item'" (click)="toggleOrder13()">
+                    <h3 class="ion-text-start">2</h3>
+                    <h4>Vanila Ice Cream</h4>
+                </div>
+                <div [ngClass]="order14 ? 'item order_done' : 'item'" (click)="toggleOrder14()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>
+                        Egg Faritta
+                        <span>Extra Cheese</span>
+                        <span>Extra Egg</span>
+                    </h4>
+                </div>
+                <div [ngClass]="order15 ? 'item order_done' : 'item'" (click)="toggleOrder15()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>Rosted Chicken
+                        <span>Extra Cheese</span>
+                    </h4>
+                </div>
+                <div [ngClass]="order16 ? 'item order_done' : 'item'" (click)="toggleOrder16()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>Farm Ville Pizz
+                        <span>Extra Cheese</span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="order">
+            <div class="order_inner">
+                <div class="order_header">
+                    <h2 class="d-flex">
+                        {{'counter' | translate}} 1
+                        <span class="end">8:49</span>
+                    </h2>
+                </div>
+                <div [ngClass]="order17 ? 'item order_done' : 'item'" (click)="toggleOrder17()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>Cheese Lasagne</h4>
+                </div>
+                <div [ngClass]="order18 ? 'item order_done' : 'item'" (click)="toggleOrder18()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>
+                        Veg Cheese Pizza
+                        <span>Extra Cheese</span>
+                    </h4>
+                </div>
+                <div [ngClass]="order19 ? 'item order_done' : 'item'" (click)="toggleOrder19()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>Ice Cream</h4>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="order">
+            <div class="order_inner">
+                <div class="order_header">
+                    <h2 class="d-flex">
+                        {{'table' | translate}} 8
+                        <span class="end">8:49</span>
+                    </h2>
+                </div>
+                <div [ngClass]="order20 ? 'item order_done' : 'item'" (click)="toggleOrder20()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>Chat Masala</h4>
+                </div>
+                <div [ngClass]="order21 ? 'item order_done' : 'item'" (click)="toggleOrder21()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>
+                        Veg Cheese Pizza
+                        <span>Extra Cheese</span>
+                    </h4>
+                </div>
+                <div [ngClass]="order22 ? 'item order_done' : 'item'" (click)="toggleOrder22()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>Fride Checken</h4>
+                </div>
+                <div [ngClass]="order23 ? 'item order_done' : 'item'" (click)="toggleOrder23()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>Mashroom Pizza</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="order">
+            <div class="order_inner">
+                <div class="order_header">
+                    <h2 class="d-flex">
+                        {{'table' | translate}} 5
+                        <span class="end">5:12</span>
+                    </h2>
+                </div>
+                <div [ngClass]="order24 ? 'item order_done' : 'item'" (click)="toggleOrder24()">
+                    <h3 class="ion-text-start">2</h3>
+                    <h4>Vanila Ice Cream</h4>
+                </div>
+                <div [ngClass]="order25 ? 'item order_done' : 'item'" (click)="toggleOrder25()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>
+                        Egg Faritta
+                        <span>Extra Cheese</span>
+                        <span>Extra Egg</span>
+                    </h4>
+                </div>
+                <div [ngClass]="order26 ? 'item order_done' : 'item'" (click)="toggleOrder26()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>Rosted Chicken
+                        <span>Extra Cheese</span>
+                    </h4>
+                </div>
+                <div [ngClass]="order27 ? 'item order_done' : 'item'" (click)="toggleOrder27()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>Farm Ville Pizz
+                        <span>Extra Cheese</span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="order">
+            <div class="order_inner">
+                <div class="order_header">
+                    <h2 class="d-flex">
+                        {{'table' | translate}} 2
+                        <span class="end">1:33</span>
+                    </h2>
+                </div>
+                <div [ngClass]="order28 ? 'item order_done' : 'item'" (click)="toggleOrder28()">
+                    <h3 class="ion-text-start order_done">1</h3>
+                    <h4>Chat Masala</h4>
+                </div>
+                <div [ngClass]="order29 ? 'item order_done' : 'item'" (click)="toggleOrder29()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>
+                        Veg Cheese Pizza
+                        <span>Extra Cheese</span>
+                    </h4>
+                </div>
+                <div [ngClass]="order30 ? 'item order_done' : 'item'" (click)="toggleOrder30()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>Fride Checken</h4>
+                </div>
+
+                <div [ngClass]="order31 ? 'item order_done' : 'item'" (click)="toggleOrder31()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>Mashroom Pizza</h4>
+                </div>
+                <div [ngClass]="order32 ? 'item order_done' : 'item'" (click)="toggleOrder32()">
+                    <h3 class="ion-text-start">2</h3>
+                    <h4>Vanila Ice Cream</h4>
+                </div>
+                <div [ngClass]="order34 ? 'item order_done' : 'item'" (click)="toggleOrder34()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>
+                        Egg Faritta
+                        <span>Extra Cheese</span>
+                        <span>Extra Egg</span>
+                    </h4>
+                </div>
+                <div [ngClass]="order35 ? 'item order_done' : 'item'" (click)="toggleOrder35()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>Rosted Chicken
+                        <span>Extra Cheese</span>
+                    </h4>
+                </div>
+                <div [ngClass]="order36 ? 'item order_done' : 'item'" (click)="toggleOrder36()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>Farm Ville Pizz
+                        <span>Extra Cheese</span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="order">
+            <div class="order_inner">
+                <div class="order_header">
+                    <h2 class="d-flex">
+                        {{'counter' | translate}} 3
+                        <span class="end">8:49</span>
+                    </h2>
+                </div>
+                <div [ngClass]="order37 ? 'item order_done' : 'item'" (click)="toggleOrder37()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>Cheese Lasagne</h4>
+                </div>
+                <div [ngClass]="order38 ? 'item order_done' : 'item'" (click)="toggleOrder38()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>
+                        Veg Cheese Pizza
+                        <span>Extra Cheese</span>
+                    </h4>
+                </div>
+                <div [ngClass]="order39 ? 'item order_done' : 'item'" (click)="toggleOrder39()">
+                    <h3 class="ion-text-start">1</h3>
+                    <h4>Ice Cream</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>
